@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+#
+# https://buildpacks.io/docs/reference/spec/buildpack-api/
+#
+#     bin/build LAYERS_DIR PLATFORM_DIR BUILD_PLAN
+#
+set -e
+echo "---> Building in chatty"
+echo "---> args: $*"
+LAYERS_DIR=$1
+PLATFORM_DIR=$2
+BUILD_PLAN=$3
+echo "LAYERS_DIR=$LAYERS_DIR"
+echo "PLATFORM_DIR=$PLATFORM_DIR"
+echo "BUILD_PLAN=$BUILD_PLAN"
+echo "---> cat \$BUILD_PLAN"
+cat $BUILD_PLAN
+echo "---> Environment Variables"
+set
+echo "---> Done"
+

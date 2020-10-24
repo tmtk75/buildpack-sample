@@ -1,0 +1,3 @@
+FROM gcr.io/distroless/python3-debian10
+
+LABEL io.buildpacks.stack.id="io.github.tmtk75.buildpack-sample.1"

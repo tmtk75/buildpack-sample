@@ -1,0 +1,31 @@
+# Buildpacks to include in builder
+[[buildpacks]]
+uri = "buildpacks/empty.cnb"
+
+[[buildpacks]]
+uri = "buildpacks/python.cnb"
+
+[[buildpacks]]
+uri = "buildpacks/chatty.cnb"
+
+# Order used for detection
+[[order]]
+[[order.group]]
+id = "buildpacks/python"
+version = "0.0.1"
+
+[[order]]
+[[order.group]]
+id = "buildpacks/empty"
+version = "0.0.1"
+
+[[order.group]]
+id = "buildpacks/chatty"
+version = "0.0.1"
+
+# Stack that will be used by the builder
+[stack]
+id = "io.github.tmtk75.buildpack-sample.1"
+run-image = "distroless:builder-run"
+build-image = "distroless:builder-build"
+
