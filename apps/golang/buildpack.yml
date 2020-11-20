@@ -1,0 +1,5 @@
+---
+go:
+  build:
+    flags:
+    - -ldflags="-X main.Commit=some-value"
